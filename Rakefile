@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "orientea"
   gem.homepage = "http://github.com/vincent/orientea"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Command Pattern Implemention for easy use with rails}
+  gem.description = %Q{Command Pattern Implemention for easy use with rails}
   gem.email = "zhu1230@gmail.com"
   gem.authors = ["Vincent Zhu"]
   # dependencies defined in Gemfile

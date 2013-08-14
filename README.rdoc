@@ -1,6 +1,8 @@
-= orientea
+= Orientea,  one command pattern for active record. 
 
-Description goes here.
+This is one command pattern implemention for ruby. Designed to use with rails (ActiveRecord).
+You can store the command object , perform it by action method , or undo it by undo method.
+Note: this gem use postgresql with hstore extension.
 
 == Contributing to orientea
  
