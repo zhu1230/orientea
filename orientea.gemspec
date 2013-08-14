@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "orientea"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Vincent Zhu"]
@@ -14,8 +14,7 @@ Gem::Specification.new do |s|
   s.email = "zhu1230@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
@@ -24,7 +23,6 @@ Gem::Specification.new do |s|
     "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
-    "README.rdoc",
     "Rakefile",
     "VERSION",
     "lib/.DS_Store",
@@ -35,6 +33,7 @@ Gem::Specification.new do |s|
     "lib/orientea/creating_command.rb",
     "lib/orientea/generators/command_generator.rb",
     "lib/orientea/templates/create_command.rb",
+    "orientea.gemspec",
     "spec/changing_command_spec.rb",
     "spec/creating_command_spec.rb",
     "spec/shared_setup.rb",
