@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "orientea"
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Vincent Zhu"]
@@ -26,15 +26,15 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/.DS_Store",
+    "lib/generators/orientea/command/USAGE",
+    "lib/generators/orientea/command/command_generator.rb",
+    "lib/generators/orientea/command/templates/create_command.rb",
+    "lib/generators/orientea/command_generator.rb",
     "lib/orientea.rb",
     "lib/orientea/.DS_Store",
     "lib/orientea/changing_command.rb",
     "lib/orientea/command.rb",
     "lib/orientea/creating_command.rb",
-    "lib/orientea/generators/command/USAGE",
-    "lib/orientea/generators/command/command_generator.rb",
-    "lib/orientea/generators/command/templates/create_command.rb",
-    "lib/orientea/generators/command_generator.rb",
     "orientea.gemspec",
     "spec/changing_command_spec.rb",
     "spec/creating_command_spec.rb",
