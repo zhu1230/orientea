@@ -24,5 +24,6 @@ describe Orientea::ChangingCommand do
     @customer.attr_name = 'Derek'
     command = Orientea::ChangingCommand.build(@customer)
     command.action
+    expect{command.undo}.to change{Customer.first.attr_name}.from('Derek').to('vincent')
   end
 end
