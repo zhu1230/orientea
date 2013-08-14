@@ -6,6 +6,14 @@ You can store the command object , perform it by action method , or undo it by u
 
 Note: this gem use postgresql with hstore extension.
 
+## INSTALL: 
+
+```
+  gem install 'orientea'
+```
+
+## USAGE:
+
 ```ruby
   @record = Record.new
   reate_command = Orientea::CreatingCommand.build(@record)  # would build and save the command
