@@ -1,5 +1,6 @@
  module Orientea
   class CommandGenerator < Rails::Generators::Base
+    include Rails::Generators::Migration
     source_root File.expand_path('../templates', __FILE__)  
     # desc "rails g orientea:command"
     def create_migration
