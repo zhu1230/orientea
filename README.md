@@ -9,7 +9,14 @@ Note: this gem use postgresql with hstore extension.
 ## INSTALL: 
 
 ```
-  gem install 'orientea'
+
+  # add gem to gemfile
+  gem 'orientea' 
+
+  # run command to setup database table
+  rails generate orientea:command  # to create the migration file for command table
+  rake db:migrate
+
 ```
 
 ## USAGE:
