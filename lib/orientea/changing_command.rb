@@ -8,7 +8,7 @@ module Orientea
       command.data['cls_str'] = record.class.to_s
       command.data['cls_id'] = record.id
       command.data['changes'] = record.changes.to_json
-      command.save!
+      # command.save!
       command
     end
 
