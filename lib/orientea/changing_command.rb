@@ -12,27 +12,29 @@ module Orientea
       command
     end
 
-    action do
+    def record_changes
+      data['changes']
+    end
+
+    def get_record(old = false)
       cls = self.data['cls_str'].constantize
       id = self.data['cls_id']
       object = cls.find(id)
       JSON.load(self.data['changes']).each do |key, value|
-        object.send("#{key}=", value.last)
+        object.send("#{key}=", (old ? value.first : value.last))
       end
-      if object.save
+      object
+    end 
+
+    action do
+      if get_record(false).save
         self.done = true
         self.save
       end
     end
 
     undo do
-      cls = self.data['cls_str'].constantize
-      id = self.data['cls_id']
-      object = cls.find(id)
-      JSON.load(self.data['changes']).each do |key, value|
-        object.send("#{key}=", value.first)
-      end
-      if object.save
+      if get_record(true).save
         self.done = false
         self.save
       end

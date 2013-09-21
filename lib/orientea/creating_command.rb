@@ -2,6 +2,8 @@ require 'orientea/command.rb'
 module Orientea
   class CreatingCommand < Orientea::Command
 
+    validates :data, presence: true
+    
     def self.build(record)
       command = self.new
       command.data = Hash.new
@@ -9,6 +11,11 @@ module Orientea
       command.data['cls_str'] = record.class.to_s
       # command.save!
       command
+    end
+
+    def get_record
+      cls = self.data['cls_str'].constantize
+      self.done ? cls.find(self.data['cls_id']): cls.new(JSON.load(self.data['changes']), without_protection: true)
     end
 
     action do
