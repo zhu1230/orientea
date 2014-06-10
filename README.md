@@ -1,8 +1,10 @@
 orientea: command pattern for active record. 
+
 ========
 
 #### This is one command pattern implementation for ruby. Designed to use with rails (ActiveRecord).
-You can store the command object , perform it by action method , or undo it by undo method. ########
+Current support Rails 4.
+You can store the command object , perform it by action method , or undo it by undo method. Useful for auditing and undo users' modification on model.########
 
 Note: this gem use postgresql with hstore extension.
 

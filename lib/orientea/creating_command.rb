@@ -9,7 +9,6 @@ module Orientea
       command.data = Hash.new
       command.data['changes'] = record.attributes.to_json
       command.data['cls_str'] = record.class.to_s
-      # command.save!
       command
     end
 
@@ -35,11 +34,6 @@ module Orientea
       self.done = false
       self.save
     end
-
-    # persist do
-    #   self.data = @record.attributes
-    #   self.data['cls_str'] = @record.class.to_s
-    # end
 
   end
 end
