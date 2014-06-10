@@ -43,7 +43,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_orientea.rb"
   ]
-  s.homepage = "http://github.com/vincent/orientea"
+  s.homepage = "http://github.com/zhu1230/orientea"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.3"

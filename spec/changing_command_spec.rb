@@ -9,15 +9,15 @@ describe Orientea::ChangingCommand do
   it "should work correctly with action" do
     @customer.attr_name = 'Derek'
     command = Orientea::ChangingCommand.build(@customer)
-    expect(command.done).to be_false
+    expect(command.done).to be_falsey
     expect{
       command.action
     }.to change{Customer.first.attr_name}.from('vincent').to('Derek')
-    expect(command.done).to be_true
+    expect(command.done).to be_truthy
   end
 
   it "should save the command object" do
-    expect{Orientea::ChangingCommand.build(@customer)}.to change{Orientea::ChangingCommand.count}.by(1)
+    expect{Orientea::ChangingCommand.build(@customer).save}.to change{Orientea::ChangingCommand.count}.by(1)
   end
 
   it "should work correctly with undo" do

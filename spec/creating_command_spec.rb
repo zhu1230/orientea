@@ -18,7 +18,7 @@ describe Orientea::CreatingCommand do
   end
 
   it "should save the command object" do
-    expect{Orientea::CreatingCommand.build(@customer)}.to change{Orientea::CreatingCommand.count}.by(1)
+    expect{Orientea::CreatingCommand.build(@customer).save}.to change{Orientea::CreatingCommand.count}.by(1)
   end
 
   it "undo should work correctly" do

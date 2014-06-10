@@ -27,7 +27,9 @@ Note: this gem use postgresql with hstore extension.
   @record = Record.new
   reate_command = Orientea::CreatingCommand.build(@record)  # would build and save the command
   record.name = "changed name"
-  hange_command = Orientea::ChangingCommand.build(@record)  
+  hange_command = Orientea::ChangingCommand.build(@record)
+  hange_command.your_any_customized_attributes = .....
+  hange_command.save # will save the command object
   hange_command.action # would apply the changes
   hange_command.undo # would discard the changes
 ```
