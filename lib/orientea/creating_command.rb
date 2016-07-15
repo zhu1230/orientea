@@ -15,12 +15,12 @@ module Orientea
 
     def get_record
       cls = self.data['cls_str'].constantize
-      self.done ? cls.find(self.data['cls_id']): cls.new(JSON.load(self.data['changes']), without_protection: true)
+      self.done ? cls.find(self.data['cls_id']): cls.new(JSON.load(self.data['changes']))
     end
 
     action do
       cls = self.data['cls_str'].constantize
-      new_object = cls.new(JSON.load(self.data['changes']), without_protection: true)
+      new_object = cls.new(JSON.load(self.data['changes']))
       if new_object.save
         self.data['cls_id'] = new_object.id
         self.data_will_change!
